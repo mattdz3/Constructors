@@ -1,0 +1,8 @@
+{
+  "name": "day1-game",
+  "private": true,
+  "dependencies": {
+    "jquery": "~1.11.0"
+  },
+  "devDependencies": {}
+}

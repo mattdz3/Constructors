@@ -1,0 +1,100 @@
+// bower:scss
+// endbower
+
+
+.header {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.heros {
+    margin-top: 100px;
+    margin-left: 180px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.button {
+    height: 50px;
+    width: 200px;
+    color: white;
+    margin-left: 30px;
+    display: inline-block;
+    letter-spacing: 2px;
+    text-align: center;
+    background-color: rgb(71, 119, 69);
+    margin-top: 100px;
+    border-radius: 10px;
+    font-size: 26px;
+    line-height: 42px;
+    box-shadow: inset 0px -10px 0px 0px rgb(43, 87, 32);
+}
+
+.megaman {
+    width: 400px;
+    height: 300px;
+    background-size: cover;
+    display: inline-block;
+    background-image: url('http://static.gamesradar.com/images/mb/GamesRadar/us/Games/M/Mega%20Man%209/Everything%20Else/Raw/rock1--article_image.jpg');
+}
+
+.link {
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    display: inline-block;
+    background-image: url('http://th300.photobucket.com/albums/nn30/chozoridley/th_8-bitLink.jpg');
+}
+
+.wizard {
+    width: 310px;
+    height: 320px;
+    background-size: cover;
+    display: inline-block;
+    background-image: url('http://cdn.instructables.com/FYG/AKTN/GLAMQ844/FYGAKTNGLAMQ844.MEDIUM.jpg');
+}
+
+.wiley {
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    display: none;
+    background-image: url('http://i68.photobucket.com/albums/i28/aquizero/GIF/MegaMan%20Gifs/drwiley.png');
+
+    &.active {
+        display: inline-block;
+    }
+}
+
+.menu {
+    display: none;
+
+    &.active {
+        display: block;
+        margin-left: 200px;
+    }
+}
+
+.game-over {
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: black;
+    color: red;
+
+    &.active {
+        display: block;
+    }
+}
+
+.footer {
+    margin-top: 200px;
+}
+
+
