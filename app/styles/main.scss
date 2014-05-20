@@ -1,6 +1,9 @@
 // bower:scss
 // endbower
 
+body {
+    font-family: 'Anton', sans-serif;
+}
 
 .header {
     font-size: 50px;
@@ -10,7 +13,7 @@
 
 .heros {
     margin-top: 100px;
-    margin-left: 180px;
+    margin-left: 100px;
 
     &:hover {
         cursor: pointer;
@@ -63,6 +66,30 @@
     background-size: cover;
     display: none;
     background-image: url('http://i68.photobucket.com/albums/i28/aquizero/GIF/MegaMan%20Gifs/drwiley.png');
+
+    &.active {
+        display: inline-block;
+    }
+}
+
+.ganon {
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    display: none;
+    background-image: url('http://24.media.tumblr.com/tumblr_m7wfggZIFI1rsx1zno1_400.png');
+
+    &.active {
+        display: inline-block;
+    }
+}
+
+.dragon {
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    display: none;
+    background-image: url('http://fc04.deviantart.net/fs70/f/2013/111/a/e/final_fantasy_v___bahamut_by_retravidya-d62l7t7.png');
 
     &.active {
         display: inline-block;
