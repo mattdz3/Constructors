@@ -1,20 +1,3 @@
-
-
-$('.megaman').click(function() {
-	$('.wizard').remove();
-	$('.link').remove();
-});
-
-$('.link').click(function() {
-	$('.megaman').remove();
-	$('.wizard').remove();
-});
-
-$('.wizard').click(function() {
-	$('.megaman').remove();
-	$('.link').remove();
-});
-
 function  Wizard () {
 	this.hp = 50;
 
@@ -36,7 +19,8 @@ $('.wizard').click(function() {
 	enemy = new Enemy();
 
 	$('.header').remove();
-
+	$('.megaman').remove();
+	$('.link').remove();
 	$('.menu').addClass('active');
 	$('.dragon').addClass('active');
 
@@ -57,7 +41,6 @@ function Link () {
 		} else {
 			target.hp = target.hp - 4
 		};
-		
 	};
 }
 
@@ -66,7 +49,8 @@ $('.link').click(function() {
 	enemy = new Enemy();
 
 	$('.header').remove();
-
+	$('.megaman').remove();
+	$('.wizard').remove();
 	$('.menu').addClass('active');
 	$('.ganon').addClass('active');
 
@@ -91,32 +75,13 @@ $('.megaman').click(function() {
 	enemy = new Enemy();
 
 	$('.header').remove();
-
+	$('.wizard').remove();
+	$('.link').remove();
 	$('.menu').addClass('active');
 	$('.wiley').addClass('active');
 
 	renderPlayer(player);
 	renderEnemy(enemy);
-});
-
-$('.attack').click(function() {
-	player.attack(enemy);
-	$('.action').text('You attack!');
-
-	renderPlayer(player);
-	renderEnemy(enemy);
-
-	enemyAttack(player);
-});
-
-$('.special').click(function() {
-	player.special(enemy);
-	$('.action').text('You used a special attack!');
-
-	renderPlayer(player);
-	renderEnemy(enemy);
-
-	enemyAttack(player);
 });
 
 function Enemy () {
@@ -135,7 +100,7 @@ function enemyAttack () {
 	setTimeout(function(){
 		if (Math.random() > .3) {
 			enemy.special(player);
-			$('.action').text('Enemy special attack!');
+			$('.action').text('Enemy used super sweet attack!');
 		} else {
 			enemy.attack(player);
 			$('.action').text('Enemy attack!');
@@ -143,9 +108,8 @@ function enemyAttack () {
 
 		renderPlayer(player);
 		renderEnemy(enemy);
-	}, 2000);
+	}, 1000);
 }
-
 
 function renderPlayer (player) {
 	if (player.hp < 1) {
@@ -166,17 +130,24 @@ function renderEnemy (enemy) {
 	}
 }
 
+$('.attack').click(function() {
+	player.attack(enemy);
+	$('.action').text('You attack!');
+
+	renderPlayer(player);
+	renderEnemy(enemy);
+	enemyAttack(player);
+});
+
+$('.special').click(function() {
+	player.special(enemy);
+	$('.action').text('You used super awesome attack!');
+
+	renderPlayer(player);
+	renderEnemy(enemy);
+	enemyAttack(player);
+});
+
 function gameOver () {
 	$('.game-over').addClass('active');
 }
-
-
-
-
-
-
-
-
-
-
-
